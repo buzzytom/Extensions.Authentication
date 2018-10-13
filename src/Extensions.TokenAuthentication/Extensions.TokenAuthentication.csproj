@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>Lean token extensions for issuing/validating tokens, automatically creating a private key and creating password salts.
+This is the API project, for concrete implementations see other projects that share this projects name</Description>
+    <Authors>Thomas Williams</Authors>
+    <Company>Thomas Williams</Company>
+    <Copyright>© Thomas Williams 2018</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.TokenAuthentication/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageTags>Extensions Dependency Injection Services Asp Net Core Net Standard Token Bearer Security</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>

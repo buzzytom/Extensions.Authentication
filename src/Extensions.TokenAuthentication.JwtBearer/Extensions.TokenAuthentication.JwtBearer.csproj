@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Lean token extensions for issuing/validating tokens, automatically creating a private key and creating password salts.
+This package provides JWT Bearer Token support.</Description>
+    <Copyright>© Thomas Williams 2018</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.TokenAuthentication/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</RepositoryUrl>
+    <PackageTags>Extensions Dependency Injection Services Asp Net Core Net Standard Token Bearer Security JWT</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Thomas Williams</Authors>
+    <Company>Thomas Williams</Company>
   </PropertyGroup>
 
   <ItemGroup>
