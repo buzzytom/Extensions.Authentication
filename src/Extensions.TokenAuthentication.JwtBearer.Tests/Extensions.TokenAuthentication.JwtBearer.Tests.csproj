@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Extensions.AspNetCore.Authentication.JwtBearer\Extensions.AspNetCore.Authentication.JwtBearer.csproj" />
+    <ProjectReference Include="..\Extensions.TokenAuthentication.JwtBearer\Extensions.TokenAuthentication.JwtBearer.csproj" />
   </ItemGroup>
 
 </Project>

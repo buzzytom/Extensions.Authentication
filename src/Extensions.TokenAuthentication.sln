@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.AspNetCore.Authentication.JwtBearer", "Extensions.AspNetCore.Authentication.JwtBearer\Extensions.AspNetCore.Authentication.JwtBearer.csproj", "{A6AA8252-4491-4E0C-BAD7-CF25D49DD3F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.TokenAuthentication.JwtBearer", "Extensions.TokenAuthentication.JwtBearer\Extensions.TokenAuthentication.JwtBearer.csproj", "{A6AA8252-4491-4E0C-BAD7-CF25D49DD3F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.AspNetCore.Authentication.JwtBearer.Tests", "Extensions.AspNetCore.Authentication.JwtBearer.Tests\Extensions.AspNetCore.Authentication.JwtBearer.Tests.csproj", "{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.TokenAuthentication.JwtBearer.Tests", "Extensions.TokenAuthentication.JwtBearer.Tests\Extensions.TokenAuthentication.JwtBearer.Tests.csproj", "{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
