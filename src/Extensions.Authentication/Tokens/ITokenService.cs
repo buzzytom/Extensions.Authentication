@@ -1,19 +1,10 @@
-﻿using System.Security.Claims;
-
-namespace Extensions.Authentication
+﻿namespace Extensions.Authentication
 {
     /// <summary>
-    /// Defines a service that provides operations for handling creating and handling authentication based tokens.
+    /// Defines a service that provides operations for tokens and hashing.
     /// </summary>
     public interface ITokenService
     {
-        /// <summary>
-        /// Creates a an authentication token for the specified claims.
-        /// </summary>
-        /// <param name="claims">The claims to include in the authentication token.</param>
-        /// <returns>The authentication token.</returns>
-        string CreateAuthenticationToken(params Claim[] claims);
-
         /// <summary>
         /// Creates a unique non-predictable token of a given length.
         /// </summary>

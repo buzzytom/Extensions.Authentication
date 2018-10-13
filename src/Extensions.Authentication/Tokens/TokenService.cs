@@ -1,27 +1,16 @@
 ﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-using Microsoft.IdentityModel.Tokens;
 using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Extensions.Authentication.JwtBearer
+namespace Extensions.Authentication
 {
     /// <summary>
-    /// Defines a service that provides operations for handling creating and handling authentication tokens.
+    /// Defines a service that provides operations for tokens and hashing.
     /// </summary>
     public class TokenService : ITokenService
     {
         private static readonly char[] characters = "abcdefghijklmnopqrstuvwxyz0123456789".ToCharArray();
-        private readonly ISymmetricKeyProvider provider;
-        private readonly JwtConfiguration configuration;
-
-        public TokenService(ISymmetricKeyProvider provider, JwtConfiguration configuration)
-        {
-            this.provider = provider ?? throw new ArgumentNullException(nameof(provider));
-            this.configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-        }
 
         /// <summary>
         /// Creates a salt to hash with a users password.
@@ -43,6 +32,7 @@ namespace Extensions.Authentication.JwtBearer
         /// <returns>The hashed value and salt.</returns>
         public string Hash(string value, string salt)
         {
+            // Microsoft.AspNetCore.Cryptography.KeyDerivation
             return Convert.ToBase64String(KeyDerivation.Pbkdf2(
                 password: value,
                 salt: Convert.FromBase64String(salt),
@@ -67,25 +57,6 @@ namespace Extensions.Authentication.JwtBearer
                     result.Append(characters[current % characters.Length]);
             }
             return result.ToString();
-        }
-
-        /// <summary>
-        /// Creates a an authentication token for the specified claims.
-        /// </summary>
-        /// <param name="claims">The claims to include in the authentication token.</param>
-        /// <returns>The authentication token.</returns>
-        public string CreateAuthenticationToken(params Claim[] claims)
-        {
-            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-            return handler.WriteToken(handler.CreateToken(new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.Add(configuration.Expiry),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(provider.Key), SecurityAlgorithms.HmacSha256Signature),
-                IssuedAt = DateTime.UtcNow,
-                Audience = configuration.Audience,
-                Issuer = configuration.Issuer
-            }));
         }
     }
 }

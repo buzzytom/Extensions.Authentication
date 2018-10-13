@@ -4,16 +4,28 @@ using System.Text.RegularExpressions;
 
 namespace Extensions.Authentication
 {
+    /// <summary>
+    /// Defines methods for validating emails and passwords.
+    /// </summary>
     public class ValidatorService : IValidatorService
     {
         private readonly Lazy<Regex> emailRegex = new Lazy<Regex>(() => new Regex(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$", RegexOptions.Compiled));
         private readonly PasswordRequirements requirements;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ValidatorService"/> class, with the specified password validation rules configuration.
+        /// </summary>
+        /// <param name="requirements">The validation rules to use when validating a password.</param>
         public ValidatorService(PasswordRequirements requirements)
         {
             this.requirements = requirements ?? throw new ArgumentNullException(nameof(requirements));
         }
 
+        /// <summary>
+        /// Gets a collection of the errors in the specified email address.
+        /// </summary>
+        /// <param name="email">The email address to validate.</param>
+        /// <returns>A collection of the errors or an empty collection if the value is valid.</returns>
         public IEnumerable<string> GetEmailErrors(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
@@ -24,6 +36,11 @@ namespace Extensions.Authentication
             return new string[0];
         }
 
+        /// <summary>
+        /// Gets a collection of the errors in the specified password.
+        /// </summary>
+        /// <param name="password">The password to validate.</param>
+        /// <returns>A collection of the errors or an empty collection if the value is valid.</returns>
         public IEnumerable<string> GetPasswordErrors(string password)
         {
             if (string.IsNullOrWhiteSpace(password))
