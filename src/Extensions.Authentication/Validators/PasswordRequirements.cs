@@ -14,12 +14,9 @@
             Special = special;
         }
 
-        public static PasswordRequirements Defaults()
-        {
-            return defaults ?? (defaults = new PasswordRequirements());
-        }
-
         // ----- Properties ----- //
+
+        public static PasswordRequirements Default => defaults ?? (defaults = new PasswordRequirements());
 
         public int? MinimumLength { get; }
 
