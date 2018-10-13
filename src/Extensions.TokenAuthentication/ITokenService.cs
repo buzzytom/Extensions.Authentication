@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Extensions.AspNetCore.Authentication.JwtBearer
+namespace Extensions.AspNetCore.Authentication
 {
     public interface ITokenService
     {

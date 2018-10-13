@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Extensions.AspNetCore.Authentication.JwtBearer
+﻿namespace Extensions.AspNetCore.Authentication
 {
     public interface ISymmetricKeyProvider
     {

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.TokenAuthenticat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.TokenAuthentication.JwtBearer.Tests", "Extensions.TokenAuthentication.JwtBearer.Tests\Extensions.TokenAuthentication.JwtBearer.Tests.csproj", "{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.TokenAuthentication", "Extensions.TokenAuthentication\Extensions.TokenAuthentication.csproj", "{17E78B70-6DE3-46CA-A881-3A10F4D82688}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E78B70-6DE3-46CA-A881-3A10F4D82688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E78B70-6DE3-46CA-A881-3A10F4D82688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E78B70-6DE3-46CA-A881-3A10F4D82688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E78B70-6DE3-46CA-A881-3A10F4D82688}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
