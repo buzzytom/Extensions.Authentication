@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace Extensions.AspNetCore.Authentication.JwtBearer
+namespace Extensions.Authentication.JwtBearer
 {
     /// <summary>
     /// A symmetric encryption key provider for the HMAC SHA 256 algorithm.

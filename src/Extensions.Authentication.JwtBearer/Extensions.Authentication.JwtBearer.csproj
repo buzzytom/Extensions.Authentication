@@ -22,7 +22,7 @@ This package provides JWT Bearer Token support.</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Extensions.TokenAuthentication\Extensions.TokenAuthentication.csproj" />
+    <ProjectReference Include="..\Extensions.Authentication\Extensions.Authentication.csproj" />
   </ItemGroup>
 
 </Project>

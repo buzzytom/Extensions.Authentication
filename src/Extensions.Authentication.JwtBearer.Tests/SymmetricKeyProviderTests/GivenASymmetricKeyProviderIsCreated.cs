@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Extensions.AspNetCore.Authentication.JwtBearer.Tests
+namespace Extensions.Authentication.JwtBearer.Tests
 {
     [TestFixture]
     public class GivenASymmetricKeyProviderInstanceIsCreated

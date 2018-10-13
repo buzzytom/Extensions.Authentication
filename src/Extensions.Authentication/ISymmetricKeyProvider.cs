@@ -1,4 +1,4 @@
-﻿namespace Extensions.AspNetCore.Authentication
+﻿namespace Extensions.Authentication
 {
     /// <summary>
     /// Defines a provider that defines a symmetric encryption key.

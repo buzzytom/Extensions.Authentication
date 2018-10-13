@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Extensions.AspNetCore.Authentication
+namespace Extensions.Authentication
 {
     /// <summary>
     /// Defines a service that provides operations for handling creating and handling authentication based tokens.

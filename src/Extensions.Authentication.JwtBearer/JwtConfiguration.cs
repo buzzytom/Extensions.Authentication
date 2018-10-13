@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Extensions.AspNetCore.Authentication.JwtBearer
+namespace Extensions.Authentication.JwtBearer
 {
     /// <summary>
     /// Defines a configuration for handling JSON Web Tokens.

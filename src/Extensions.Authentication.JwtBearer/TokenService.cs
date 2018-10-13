@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Extensions.AspNetCore.Authentication.JwtBearer
+namespace Extensions.Authentication.JwtBearer
 {
     /// <summary>
     /// Defines a service that provides operations for handling creating and handling authentication tokens.

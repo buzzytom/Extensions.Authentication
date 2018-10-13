@@ -15,6 +15,7 @@ This is the API project, for concrete implementations see other projects that sh
     <PackageTags>Extensions Dependency Injection Services Asp Net Core Net Standard Token Bearer Security</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageId>Buzzytom.Extensions.Authentication</PackageId>
   </PropertyGroup>
 
 </Project>
