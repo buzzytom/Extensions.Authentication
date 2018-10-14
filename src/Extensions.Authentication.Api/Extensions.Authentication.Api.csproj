@@ -6,7 +6,7 @@
 This package provides JWT Bearer Token support.</Description>
     <Copyright>© Thomas Williams 2018</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.Authentication/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/buzzytom/Extensions.Authentication</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/buzzytom/Extensions.Authentication/src/Extensions.Authentication.Api</PackageProjectUrl>
     <RepositoryUrl>https://github.com/buzzytom/Extensions.Authentication</RepositoryUrl>
     <PackageTags>Extensions Dependency Injection Services Asp Net Core Net Standard Token Bearer Security JWT</PackageTags>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
