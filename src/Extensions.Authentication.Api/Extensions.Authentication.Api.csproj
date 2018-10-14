@@ -14,6 +14,7 @@ This package provides JWT Bearer Token support.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Thomas Williams</Authors>
     <Company>Thomas Williams</Company>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/24457121</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
