@@ -49,6 +49,8 @@ namespace Extensions.Authentication
             List<string> errors = new List<string>();
             if (requirements.MinimumLength.HasValue && password.Length < requirements.MinimumLength)
                 errors.Add($"Password must be {requirements.MinimumLength} characters or longer.");
+            if (password.Length > requirements.MaximumLength)
+                errors.Add($"Password must be no more than {requirements.MaximumLength} characters long.");
             if (requirements.Lowercase && !Regex.IsMatch(password, "[a-z]"))
                 errors.Add("Missing lowercase characters (a-z).");
             if (requirements.Uppercase && !Regex.IsMatch(password, "[A-Z]."))
