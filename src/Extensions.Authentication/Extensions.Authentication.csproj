@@ -17,6 +17,7 @@ This is the API project, for concrete implementations see other projects that sh
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <PackageId>Buzzytom.Extensions.Authentication</PackageId>
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/24457121</PackageIconUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
