@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Extensions.Authentication.JwtBearer\Extensions.Authentication.JwtBearer.csproj" />
+    <ProjectReference Include="..\Extensions.Authentication\Extensions.Authentication.csproj" />
   </ItemGroup>
 
 </Project>

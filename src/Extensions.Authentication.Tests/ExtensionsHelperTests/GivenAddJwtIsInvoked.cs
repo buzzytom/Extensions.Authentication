@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Extensions.Authentication.JwtBearer;
+using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace Extensions.Authentication.JwtBearer.Tests
+namespace Extensions.Authentication.Tests
 {
     [TestFixture]
     public class GivenAddJwtIsInvoked
@@ -29,7 +30,7 @@ namespace Extensions.Authentication.JwtBearer.Tests
                 Issuer = "some issuer"
             };
 
-            JwtExtensionsHelper.AddJwt(services.Object, configuration);
+            ExtensionsHelper.AddJwt(services.Object, configuration);
         }
 
         [Test]

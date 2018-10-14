@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Authentication.JwtBearer", "Extensions.Authentication.JwtBearer\Extensions.Authentication.JwtBearer.csproj", "{A6AA8252-4491-4E0C-BAD7-CF25D49DD3F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Authentication.Api", "Extensions.Authentication.Api\Extensions.Authentication.Api.csproj", "{A6AA8252-4491-4E0C-BAD7-CF25D49DD3F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Authentication.JwtBearer.Tests", "Extensions.Authentication.JwtBearer.Tests\Extensions.Authentication.JwtBearer.Tests.csproj", "{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Authentication.Tests", "Extensions.Authentication.Tests\Extensions.Authentication.Tests.csproj", "{77A85DEA-9D89-42D8-8F7C-1EF896E4A64E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Authentication", "Extensions.Authentication\Extensions.Authentication.csproj", "{17E78B70-6DE3-46CA-A881-3A10F4D82688}"
 EndProject

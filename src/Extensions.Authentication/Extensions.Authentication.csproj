@@ -8,9 +8,9 @@ This is the API project, for concrete implementations see other projects that sh
     <Authors>Thomas Williams</Authors>
     <Company>Thomas Williams</Company>
     <Copyright>© Thomas Williams 2018</Copyright>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.TokenAuthentication/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</RepositoryUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.Authentication/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/buzzytom/Extensions.Authentication</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/buzzytom/Extensions.Authentication</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>Extensions Dependency Injection Services Asp Net Core Net Standard Token Bearer Security</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
@@ -19,8 +19,13 @@ This is the API project, for concrete implementations see other projects that sh
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Extensions.Authentication.Api\Extensions.Authentication.Api.csproj" />
   </ItemGroup>
 
 </Project>

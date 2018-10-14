@@ -5,9 +5,9 @@
     <Description>Lean token extensions for issuing/validating tokens, automatically creating a private key and creating password salts.
 This package provides JWT Bearer Token support.</Description>
     <Copyright>© Thomas Williams 2018</Copyright>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.TokenAuthentication/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/buzzytom/Extensions.TokenAuthentication</RepositoryUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/buzzytom/Extensions.Authentication/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/buzzytom/Extensions.Authentication</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/buzzytom/Extensions.Authentication</RepositoryUrl>
     <PackageTags>Extensions Dependency Injection Services Asp Net Core Net Standard Token Bearer Security JWT</PackageTags>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
@@ -17,14 +17,7 @@ This package provides JWT Bearer Token support.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Extensions.Authentication\Extensions.Authentication.csproj" />
   </ItemGroup>
 
 </Project>

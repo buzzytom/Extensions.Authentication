@@ -1,9 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Extensions.Authentication.JwtBearer;
+using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using NUnit.Framework;
 using System;
 
-namespace Extensions.Authentication.JwtBearer.Tests
+namespace Extensions.Authentication.Tests
 {
     [TestFixture]
     public class GivenAddJwtIsInvokedWithInvalidParameters
@@ -11,14 +12,14 @@ namespace Extensions.Authentication.JwtBearer.Tests
         [Test]
         public void WithoutAServiceCollection_ThenAnErrorIsThrown()
         {
-            ArgumentNullException exception = Assert.Throws<ArgumentNullException>(() => JwtExtensionsHelper.AddJwt(null, new JwtConfiguration()));
+            ArgumentNullException exception = Assert.Throws<ArgumentNullException>(() => ExtensionsHelper.AddJwt(null, new JwtConfiguration()));
             Assert.AreEqual("services", exception.ParamName);
         }
 
         [Test]
         public void WithoutAConfiguration_ThenAnErrorIsThrown()
         {
-            ArgumentNullException exception = Assert.Throws<ArgumentNullException>(() => JwtExtensionsHelper.AddJwt(Mock.Of<IServiceCollection>(), null));
+            ArgumentNullException exception = Assert.Throws<ArgumentNullException>(() => ExtensionsHelper.AddJwt(Mock.Of<IServiceCollection>(), null));
             Assert.AreEqual("configuration", exception.ParamName);
         }
     }
