@@ -26,16 +26,16 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register other services here, like entity framework
     
-	// Adds a ITokenService to the dependency services
-	services.AddTokenService();
+    // Adds a ITokenService to the dependency services
+    services.AddTokenService();
 	
     // Adds a IValidatorService to the dependency services
-	services.AddValidationService();
+    services.AddValidationService();
 	
-	// Adds:
-	// - JWT middleware services supporting the Authorize attribute
-	// - Adds a ISymmetricKeyProvider to the dependency services
-	services.AddJwt();
+    // Adds:
+    // - JWT middleware services supporting the Authorize attribute
+    // - Adds a ISymmetricKeyProvider to the dependency services
+    services.AddJwt();
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -44,12 +44,12 @@ Make sure your application is configured to use authentication.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ c#
 public void Configure(IApplicationBuilder application)
 {
-	// Configure other services here
+    // Configure other services here
 
-	// Enable authentication, JWT middleware does not work without this
-	application.UseAuthentication();
+    // Enable authentication, JWT middleware does not work without this
+    application.UseAuthentication();
 	
-	// Configure other services here. E.g. services.UseMvc();
+    // Configure other services here. E.g. services.UseMvc();
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -63,26 +63,26 @@ public class AuthenticationController : ControllerBase
 	private readonly IBearerTokenService bearerTokenService;
 
 	public AuthenticationController(ITokenService tokenService,
-									IBearerTokenService, bearerTokenService)
+                                    IBearerTokenService, bearerTokenService)
 	{
-		this.tokenService = tokenService;
-		this.bearerTokenService = bearerTokenService;
+        this.tokenService = tokenService;
+        this.bearerTokenService = bearerTokenService;
 	}
 
 	[HttpPost]
 	[Route("authenticate")]
 	public string Authenticate([FromBody] AuthenticateRequest request)
 	{
-		// DON'T ACTUALLY DO IT LIKE THIS
-		// THIS IS ONLY AN EXAMPLE
+        // DON'T ACTUALLY DO IT LIKE THIS
+        // THIS IS ONLY AN EXAMPLE
 		
-		YourUserType user = GetUserFromYourPersistentStore(request.Email);
+        YourUserType user = GetUserFromYourPersistentStore(request.Email);
 	
-		string requestHash = tokenService.Hash(request.Password, user.Salt);
-		if (requestHash == user.PasswordHash)
-			return bearerTokenService.CreateAuthenticationToken(new Claim(ClaimTypes.Email, request.Email.ToLower()));
-		else
-			return null;
+        string requestHash = tokenService.Hash(request.Password, user.Salt);
+        if (requestHash == user.PasswordHash)
+            return bearerTokenService.CreateAuthenticationToken(new Claim(ClaimTypes.Email, request.Email.ToLower()));
+        else
+            return null;
 	}
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -93,39 +93,39 @@ Example registration controller
 [Route("/api/account")]
 public class RegisterController : ControllerBase
 {
-	private readonly ITokenService service;
+    private readonly ITokenService service;
 
-	public AuthenticationController(ITokenService service)
-	{
-		this.service = service;
-	}
+    public AuthenticationController(ITokenService service)
+    {
+        this.service = service;
+    }
 
-	[HttpPost]
-	[Route("register")]
-	public void Register([FromBody] RegisterRequest request)
-	{
-		// DON'T ACTUALLY DO IT LIKE THIS
-		// THIS IS ONLY AN EXAMPLE
+    [HttpPost]
+    [Route("register")]
+    public void Register([FromBody] RegisterRequest request)
+    {
+        // DON'T ACTUALLY DO IT LIKE THIS
+        // THIS IS ONLY AN EXAMPLE
 		
-		// Perform request validation checks
+        // Perform request validation checks
 		
-		bool exists = CheckUserDoesNotExistInYourPersistentStore(request.Email);
-		if (exists)
-			return false;
+        bool exists = CheckUserDoesNotExistInYourPersistentStore(request.Email);
+        if (exists)
+            return false;
 			
-		// Create the password
+        // Create the password
         string salt = service.GenerateSalt();
         string hash = service.Hash(request.Password, salt);
 	
-		// Create the new user
-		CreateNewUserInYourPersistentStore(new YourUser
-		{
-			Email = request.Email,
-			Salt = salt,
-			PasswordHash = hash
-			// Other properties
-		});
-	}
+        // Create the new user
+        CreateNewUserInYourPersistentStore(new YourUser
+        {
+            Email = request.Email,
+            Salt = salt,
+            PasswordHash = hash
+            // Other properties
+        });
+    }
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
